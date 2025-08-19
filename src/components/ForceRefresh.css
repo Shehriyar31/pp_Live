@@ -1,0 +1,35 @@
+/* FORCE CSS REFRESH - Override Bootstrap */
+.form-control.form-input {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 2px solid rgba(255, 140, 0, 0.2) !important;
+  color: #ffffff !important;
+}
+
+.form-control.form-input:focus {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: #ff8c00 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.15), 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Override any Bootstrap defaults */
+.form-control {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 2px solid rgba(255, 140, 0, 0.2) !important;
+  color: #ffffff !important;
+}
+
+/* Fix bank card background */
+.bank-info-card {
+  background: rgba(255, 140, 0, 0.1) !important;
+  border: 1px solid rgba(255, 140, 0, 0.3) !important;
+}
+
+.card {
+  background: rgba(255, 140, 0, 0.1) !important;
+  border: 1px solid rgba(255, 140, 0, 0.3) !important;
+}
+
+.card-body {
+  background: transparent !important;
+}

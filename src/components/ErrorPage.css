@@ -1,0 +1,13 @@
+.error-actions {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.error-actions .login-button {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.error-actions .login-button:last-child {
+  margin-bottom: 0;
+}

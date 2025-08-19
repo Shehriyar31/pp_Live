@@ -1,0 +1,34 @@
+.announcement-ticker {
+  background: linear-gradient(135deg, #ff8c00, #ffa500);
+  color: white;
+  padding: 8px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  border-bottom: 2px solid rgba(255, 140, 0, 0.5);
+}
+
+.ticker-content {
+  display: inline-block;
+  animation: scroll 30s linear infinite;
+  padding-left: 100%;
+}
+
+.ticker-icon {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.ticker-item {
+  margin-right: 50px;
+  font-weight: 500;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

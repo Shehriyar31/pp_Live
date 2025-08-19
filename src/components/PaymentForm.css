@@ -1,0 +1,115 @@
+.payment-info {
+  margin-bottom: 30px;
+}
+
+.bank-info-card {
+  background: rgba(255, 140, 0, 0.1);
+  border: 1px solid rgba(255, 140, 0, 0.3);
+  border-radius: 12px;
+}
+
+.bank-info-card .card-body {
+  padding: 20px;
+}
+
+.bank-title {
+  color: #ff8c00;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.bank-details {
+  color: #ffffff;
+}
+
+.bank-item {
+  margin-bottom: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 140, 0, 0.2);
+}
+
+.bank-item:last-child {
+  border-bottom: none;
+}
+
+.bank-item strong {
+  color: #ffa500;
+  display: inline-block;
+  width: 140px;
+}
+
+.payment-instructions {
+  background: rgba(255, 140, 0, 0.05);
+  border: 1px solid rgba(255, 140, 0, 0.2);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.instruction-title {
+  color: #ff8c00;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.instruction-text {
+  color: #cccccc;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.instruction-text strong {
+  color: #ffa500;
+}
+
+.welcome-message {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.welcome-message p {
+  color: #cccccc;
+  font-size: 14px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.welcome-message p strong {
+  color: #ff8c00;
+  font-weight: 600;
+}
+
+.welcome-message p em {
+  color: #ffa500;
+  font-style: italic;
+}
+
+.fee-notice {
+  color: #ff6347 !important;
+  font-weight: 600 !important;
+  margin-top: 15px !important;
+  padding: 10px;
+  background: rgba(255, 99, 71, 0.1);
+  border: 1px solid rgba(255, 99, 71, 0.3);
+  border-radius: 6px;
+}
+
+.payment-select option {
+  background-color: #2d2d2d !important;
+  color: #ffffff !important;
+  padding: 10px !important;
+}
+
+.payment-select option:hover {
+  background-color: #ff8c00 !important;
+  color: #ffffff !important;
+}
+
+.payment-select option:checked {
+  background-color: #ff8c00 !important;
+  color: #ffffff !important;
+}
