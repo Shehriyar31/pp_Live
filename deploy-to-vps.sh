@@ -8,7 +8,7 @@ echo "🚀 Starting deployment to VPS..."
 # Variables
 VPS_IP="168.231.121.18"
 DOMAIN="profitspro.click"
-REPO_URL="https://github.com/Shehriyar31/pp_site.git"
+REPO_URL="https://github.com/Shehriyar31/pp_Live.git"
 PROJECT_DIR="/var/www/html"
 BACKUP_DIR="/var/backups/old_site_$(date +%Y%m%d_%H%M%S)"
 
@@ -23,7 +23,7 @@ ssh root@$VPS_IP << 'EOF'
     
     echo "📥 Cloning new repository..."
     cd /var/www
-    git clone https://github.com/Shehriyar31/pp_site.git temp_repo
+    git clone https://github.com/Shehriyar31/pp_Live.git temp_repo
     mv temp_repo/* html/
     mv temp_repo/.* html/ 2>/dev/null || true
     rm -rf temp_repo

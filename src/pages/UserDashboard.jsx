@@ -801,12 +801,10 @@ const UserDashboard = () => {
                         Build your network, earn commissions, and achieve financial freedom.
                       </p>
                       <div className="d-flex justify-content-center gap-3">
-                        <Button className="login-button" style={{border: 'none'}}>
+                        <Button className="login-button" style={{border: 'none'}} onClick={() => navigate('/referrals')}>
                           <i className="bi bi-play-circle me-2"></i>Get Started
                         </Button>
-                        <Button variant="outline-warning">
-                          <i className="bi bi-info-circle me-2"></i>Learn More
-                        </Button>
+
                       </div>
                     </div>
                   </Card.Body>
@@ -837,14 +835,14 @@ const UserDashboard = () => {
                       <Button 
                         variant="outline-warning" 
                         size="sm"
-                        onClick={() => setActiveSection('withdraw')}
+                        onClick={() => navigate('/withdraw')}
                       >
                         <i className="bi bi-arrow-up-circle me-2"></i>Request Withdrawal
                       </Button>
                       <Button 
                         variant="outline-warning" 
                         size="sm"
-                        onClick={() => setActiveSection('earnings')}
+                        onClick={() => navigate('/earnings')}
                       >
                         <i className="bi bi-graph-up me-2"></i>View Earnings
                       </Button>
@@ -1554,7 +1552,7 @@ const UserDashboard = () => {
                     ) : (
                       <div>
                         <Button variant="outline-warning" disabled size="lg">
-                          <i className="bi bi-clock me-2"></i>Already Spun Today
+                          <i className="bi bi-clock me-2"></i>Already Spin Today
                         </Button>
                         {spinnerData.nextSpinTime && (
                           <div className="mt-3">

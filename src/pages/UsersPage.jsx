@@ -41,6 +41,7 @@ const UsersPage = () => {
   const [users, setUsers] = useState([]);
   const [filteredUsers, setFilteredUsers] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [statusFilter, setStatusFilter] = useState('active');
   const [loading, setLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
@@ -105,18 +106,28 @@ const UsersPage = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Filter users based on search term
+  // Filter users based on search term and status
   useEffect(() => {
-    if (!searchTerm.trim()) {
-      setFilteredUsers(users);
-    } else {
-      const filtered = users.filter(user => 
+    let filtered = users;
+    
+    // Filter by status
+    if (statusFilter === 'active') {
+      filtered = filtered.filter(user => user.status === 'Active');
+    } else if (statusFilter === 'inactive') {
+      filtered = filtered.filter(user => user.status === 'Inactive');
+    }
+    // 'all' shows all users, no additional filtering needed
+    
+    // Filter by search term
+    if (searchTerm.trim()) {
+      filtered = filtered.filter(user => 
         user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         user.username.toLowerCase().includes(searchTerm.toLowerCase())
       );
-      setFilteredUsers(filtered);
     }
-  }, [searchTerm, users]);
+    
+    setFilteredUsers(filtered);
+  }, [searchTerm, users, statusFilter]);
 
   // Calculate stats from users
   const getStats = () => {
@@ -482,6 +493,31 @@ const UsersPage = () => {
                   >
                     <i className="bi bi-plus-circle me-2"></i>Add New User
                   </Button>
+                </div>
+                <div className="d-flex justify-content-center mb-3">
+                  <div className="btn-group" role="group">
+                    <Button 
+                      variant={statusFilter === 'active' ? 'success' : 'outline-success'}
+                      size="sm"
+                      onClick={() => setStatusFilter('active')}
+                    >
+                      <i className="bi bi-check-circle me-1"></i>Active
+                    </Button>
+                    <Button 
+                      variant={statusFilter === 'inactive' ? 'secondary' : 'outline-secondary'}
+                      size="sm"
+                      onClick={() => setStatusFilter('inactive')}
+                    >
+                      <i className="bi bi-x-circle me-1"></i>Inactive
+                    </Button>
+                    <Button 
+                      variant={statusFilter === 'all' ? 'warning' : 'outline-warning'}
+                      size="sm"
+                      onClick={() => setStatusFilter('all')}
+                    >
+                      <i className="bi bi-people me-1"></i>All
+                    </Button>
+                  </div>
                 </div>
                 <div className="search-container" style={{position: 'relative'}}>
                   <Form.Control
