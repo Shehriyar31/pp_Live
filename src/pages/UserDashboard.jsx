@@ -1479,13 +1479,13 @@ const UserDashboard = () => {
                             <p className="professional-spinner-slice-text">Try Again</p>
                           </li>
                           <li className="professional-spinner-slice">
-                            <p className="professional-spinner-slice-text">$0.001</p>
+                            <p className="professional-spinner-slice-text">$0.1</p>
                           </li>
                           <li className="professional-spinner-slice">
                             <p className="professional-spinner-slice-text">Try Again</p>
                           </li>
                           <li className="professional-spinner-slice">
-                            <p className="professional-spinner-slice-text">$0.2</p>
+                            <p className="professional-spinner-slice-text">$3</p>
                           </li>
                           <li className="professional-spinner-slice">
                             <p className="professional-spinner-slice-text">Try Again</p>
@@ -1497,7 +1497,7 @@ const UserDashboard = () => {
                             <p className="professional-spinner-slice-text">Try Again</p>
                           </li>
                           <li className="professional-spinner-slice">
-                            <p className="professional-spinner-slice-text">$0.8</p>
+                            <p className="professional-spinner-slice-text">$5</p>
                           </li>
                           <li className="professional-spinner-slice">
                             <p className="professional-spinner-slice-text">Try Again</p>
